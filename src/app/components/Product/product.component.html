@@ -1,0 +1,19 @@
+<h3>Product List</h3>
+<table border="5">
+  <tr>
+    <th>Imported</th>
+    <th>Description</th>
+    <th>Price</th>
+    <th>Tax</th>
+    <th>Add to cart</th>
+  </tr>
+  <tr *ngFor="let product of products">
+    <td (click)="importTax(product)"><input type="checkbox"></td>
+    <td>{{product.name}}</td>
+    <td>${{product.price}}</td>
+    <td>{{product.tax}}%</td>
+    <td>
+      <a (click)="addToCart(product.id)">Add Item</a>
+    </td>
+  </tr>
+</table>
